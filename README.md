@@ -1,5 +1,5 @@
 # NFC
-NFC is an Android application designed to read and write NFC tags for a loyalty program. The app securely stores and updates loyalty points on NFC tags using RC4 encryption.
+NFC is an Android application designed to read and write NFC tags for a loyalty program. The app securely stores and updates loyalty points on NFC tags.
 
 # 📲 **NFC - Loyalty App**
 
@@ -31,11 +31,6 @@ Welcome to **NFC** - your one-stop solution for managing loyalty points using NF
    - Users can add loyalty points via a simple input.
    - The updated points are encrypted and written back to the NFC tag.
    - The app ensures that all data stored on the tag is secure.
-
-### 4. **Encryption (RC4)**
-   - The app uses the **RC4 encryption algorithm** to ensure secure communication between the NFC tag and the app.
-   - Data is encrypted in Base64 format to ensure readability and security.
-
 ---
 
 ## 🛠 **Tech Stack**
