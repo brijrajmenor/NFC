@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F4F6"
+    android:longClickable="false"
+    android:nestedScrollingEnabled="false"
+    tools:context=".MainActivity">
+
+    <!-- App Logo (Centered) -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Welcome to Team Orritel"
+        android:textColor="#4A148C"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <TextView
+        android:id="@+id/point_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="Loyalty Points for Today!"
+        android:textColor="#4A148C"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome"
+        app:layout_constraintVertical_bias="0.093" />
+
+    <EditText
+        android:id="@+id/points"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Enter Points"
+        android:inputType="number"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#4A148C"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/point_day" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Enter Guest Name"
+        android:inputType="textCapSentences|textPersonName"
+        android:maxLines="1"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#4A148C"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/points" />
+
+    <TextView
+        android:id="@+id/username_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#4A148C"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/point_day"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:backgroundTint="#4A148C"
+        android:elevation="4dp"
+        android:text="Submit"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFB74D"
+        android:elevation="4dp"
+        android:text="New Card"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/submit" />
+
+    <TextView
+        android:id="@+id/point_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Total Points: 0"
+        android:textColor="#4A148C"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reset" />
+
+    <!-- Logout Button -->
+    <ImageView
+        android:id="@+id/logout"
+        android:layout_width="39dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/logout"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#4A148C"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
